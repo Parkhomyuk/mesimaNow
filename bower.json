@@ -1,0 +1,27 @@
+{
+  "name": "mesimanow",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "parkhomyukalex"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "jquery": "^3.3.1",
+    "angular-route": "^1.6.9",
+    "font-awesome": "4.7.0",
+    "angular-bootstrap": "^2.5.0",
+    "angular-animate": "^1.6.9",
+    "angular-material": "1.1.0"
+  }
+}

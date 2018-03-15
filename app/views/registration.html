@@ -1,0 +1,71 @@
+<!--
+<modal id="custom-modal-1">
+    <div class="modal">
+        <div class="modal-body">
+            <h1>A Custom Modal!</h1>
+            <p>
+                Home page text: <input type="text" ng-model="vm.bodyText" />
+            </p>
+            <button ng-click="vm.closeModal('custom-modal-1');">Close</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal>-->
+<div class='ng-modal' ng-show='show'>
+    <div class='ng-modal-overlay' ng-click='hideModal()'></div>
+    <div class='ng-modal-dialog' ng-style='dialogStyle'>
+        <div class='ng-modal-close' ng-click='hideModal()'><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class='ng-modal-dialog-content' ng-transclude>
+            <div class="registration" ng-if="par=='registration'">
+                <div class="registration-title">
+                    <h4>Быстрая регистрация через:</h4>
+                </div>
+
+                <button class="btn btn-default btn-google"> <i class="fa fa-google-plus" aria-hidden="true"></i>Google +</button>
+                <button class="btn btn-default btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</button>
+                <button class="btn btn-default btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</button>
+                <div class="registration-title">
+                <p>или по электронной почте</p>
+                </div>
+                <div class="registration-email">
+                    <input type="email" placeholder="E-mail" >
+                </div>
+                <button class="btn btn-default reg-button"   ng-click="hideModal();contReg()"> Зарегистроваться</button>
+                <div class="registration-agree">
+                    <p>Уже зарегистрированны? <a class="registration-link"   ng-click="hideModal()" >Войдите</a></p>
+                </div>
+
+                <div class="registration-checkBox">
+                    <input type="checkbox"  aria-label="..."/><p> Я согласен с <a class="registration-link" >правилами сайта</a></p>
+                </div>
+
+            </div>
+            <div class="logIn" ng-if="par=='logIn'">
+                <div class="registration-title">
+                    <h4>Быстрый вход через:</h4>
+                </div>
+
+                <button class="btn btn-default btn-google"> <i class="fa fa-google-plus" aria-hidden="true"></i>Google +</button>
+                <button class="btn btn-default btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</button>
+                <button class="btn btn-default btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</button>
+                <div class="registration-title">
+                    <p>Вход по паролю</p>
+                </div>
+                <div class="login-email">
+                    <input type="email" placeholder="E-mail" >
+                    <input type="password" placeholder="password" >
+                </div>
+                <div class="login-forgot">
+                <button class="btn btn-default reg-button">Войти</button>
+
+                    <p> <a class="registration-link">Забыли пароль</a></p>
+                </div>
+
+                <div class="login-checkBox">
+                    <p> Еще не с нами? <a class="registration-link" >Зарегистрируйтесь</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
