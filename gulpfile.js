@@ -9,6 +9,7 @@ gulp.task('start', function() {
         .pipe(server({
             livereload: true,
             open: true,
+            port: 4200,
             browser:'chrome'
         }))
 });

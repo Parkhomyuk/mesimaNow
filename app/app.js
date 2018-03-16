@@ -1,4 +1,4 @@
-angular.module('tasksList',['ngMap','ngAnimate',"ngRoute","ui.bootstrap"])
+angular.module('tasksList',['ngMap','ngAnimate',"ngRoute","ui.bootstrap",'pascalprecht.translate'])
     .constant("dataUrl","data.json")
     .constant("pageCount",5)
     .config(['$locationProvider', function($locationProvider){
