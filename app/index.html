@@ -75,11 +75,11 @@
                     <a class="b-toolbar__authorization__link js-btnLogin" href=""   ng-click='toggleModal(logIn)'>Вход</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    <a   class="dropdown-toggle" data-toggle="dropdown" role="button"
 
                        aria-expanded="false">Язык<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li ng-repeat="lang in languages" ng-click="updateLanguage(lang)"><a href="#">{{lang}}</a></li>
+                        <li ng-repeat="lang in languages" ng-click="updateLanguage(lang)"><a >{{lang}}</a></li>
                         <!--<li><a href="#">עברית</a></li>
                         <li><a href="#">English</a></li>
                         <li><a href="#">Русский</a></li>-->
@@ -98,7 +98,7 @@
 <div class="col-xs-12">
     <ng-include src="'views/social.html'"></ng-include>
 </div>
-<footer id="Footer" class="b-footer">
+<!--<footer id="Footer" class="b-footer">
 
     <div class="b-footer__inner">
 
@@ -110,7 +110,7 @@
 
 </div>
 
-</footer>
+</footer>-->
 <modal-dialog show='modalShown' width='350px' height='60%' par="par" paramReg="paramReg">
 
 </modal-dialog>
@@ -136,8 +136,8 @@
 <script src="js/filters/customFilters.filter.js"></script>
 <script src="libs/ngmap/build/scripts/ng-map.min.js"></script>
 <script src="js/languages/translateProvider.config.js"></script>
-    <!--<script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+   <!-- <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWys0fauV_MLix87T2tIY5ZD7GlB5X5rY&callback=initMap">
     </script>-->
 
 

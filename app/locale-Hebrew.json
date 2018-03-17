@@ -12,6 +12,24 @@
     "TERMS":"Terms",
     "FAQ":"שאלות נפוצות"
   },
+  "UNLIMITPACKAGE_PAGE":{
+    "":"שליחים",
+    "": "תיקון ובנייה",
+    "": "תיקון ובנייה",
+    "": "הובלת מטענים",
+    "": "Virtual Assistant",
+    "": "Computer help",
+    "": "Events and promotions",
+    "": "Design",
+    "": "Web Development",
+    "": "Photo and video services",
+    "": "Installation and repair of machinery",
+    "": "Beauty and health",
+    "": "Repair of digital equipment",
+    "": "Legal assistance",
+    "": "Tutoring and education",
+    "": "Repair of transport"
+  } ,
   "English": "English",
   "Hebrew": "עברית",
   "Russian": "Русский"

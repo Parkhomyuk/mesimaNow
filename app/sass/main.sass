@@ -891,14 +891,14 @@ input:focus:-ms-input-placeholder
 /*Mesima describe*/
 /* footer*/
 .b-footer
-  position: fixed
   width: 100%
   bottom: 0
   left: 0
   right: 0
-  background-color: rgba(112, 156, 255, 0.98)
+  border-top: 1px solid rgba(0, 0, 0, 0.4)
   color: #000000
   text-align: center
+
 
 .b-footer__copyright
   background-color: rgba(0, 0, 0, 0.39)
@@ -932,16 +932,22 @@ input:focus:-ms-input-placeholder
 .b-social__btn:hover
   background-color: #07205b
   border: 1px solid rgba(24, 76, 224, 0.78)
-
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-youtube:hover
+  color: white
 .b-social__btn_ytb:hover
   background-color: #d31c06
   border: 1px solid rgba(24, 76, 224, 0.78)
-
+  color: white
 .b-footer__sharing
   padding: 0 1vw 2vh 1vw
-
+  border-top: 1px solid rgba(0, 0, 0, 0.4)
 .b-social__text
   padding: 3vh 0.5vw
+.b-social__btn .fa, .b-social__btn_ytb .fa
+  margin-left: -35px
 
 /* footer*/
  /* mainCont*/
@@ -1166,8 +1172,8 @@ input:focus:-ms-input-placeholder
 /* unlimited packages page Start*/
 .mainPageUnlimited_packages
   margin-top: 14vh
-  width: 50%
-  margin-left: 25%
+  width: 80%
+  margin-left: 10%
 
 .unlimited_packages_header
   text-align: center
@@ -1178,11 +1184,57 @@ input:focus:-ms-input-placeholder
   text-align: left
 .unlimited_packages_main_content
   @include flex-g_row
+  justify-content: space-around
 .main_content_offers
   @include flex-g_column
+  justify-content: space-around
 .main_content_offers_item
   @include flex-g_column
-  width: 200px
+  width: 15vw
+.main_content_offers_item>div
+  text-align: center
 .main_content_offers_item_svg
   color: deeppink
+  text-align: center
+.main_content_offers_item_svg>svg
+  height: 5vh
+  width: auto
+.main_content_offers_item> div>h5
+  font-weight: 700
+.unlimited_packages_table_iteMName
+  width: 60%
+.unlimited_packages_table_iteMPrice
+  width: 30%
+.unlimited_packages_table_iteMChoose
+  width: 20%
+.table thead >th
+  font-size: 0.5rem
+  font-weight: 700
+.table-body:hover
+  background-color: rgba(0, 0, 255, 0.35)
+  box-shadow: 5px 5px 10px rgba(0, 0, 140, 0.76)
+  cursor: pointer
+  color: white
 /* unlimited packages page End*/
+/*Media start*/
+$tablet-width: "(max-width: 768px)"
+$mobile-width: "(max-device-width:480px)"
+@media #{$mobile-width}
+  .mainPageUnlimited_packages
+    width: 80%
+    margin-top: 7vh
+    margin-left: 5%
+    margin-right: 5%
+    font-size: 2rem
+  .main_content_offers
+    display: none !important
+    flex-shrink: 0
+  .unlimited_packages_main_content
+     flex-shrink: 1
+  .table-header
+    display: none !important
+  .table
+    margin-top: 2vh
+    cursor: pointer
+
+/*Media End*/

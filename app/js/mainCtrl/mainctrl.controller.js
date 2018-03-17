@@ -5,8 +5,16 @@ angular.module('tasksList')
         $scope.logOn = 'registration';
         $scope.logIn = 'logIn';
         $scope.openInf=false;
-        $scope.menuInf=[{name:'UNLIMITPAKAGE',href:'/unlimitedPackages'},{name:'HOWITWORKS',href:""},{name:'HOWTOBECACONTAROCTOR',href:""},{name:'BLOG',href:""},{name:'CLIENTREWIEWS',href:""},{name:'TERMS',href:""},{name:'FAQ',href:""},{name:'CONTACTS',href:""}];
+        $scope.menuInf=[{name:'PAGE_FIRST.UNLIMITPAKAGE',href:'/unlimitedPackages'},{name:'PAGE_FIRST.HOWITWORKS',href:""},{name:'PAGE_FIRST.HOWTOBECACONTAROCTOR',href:""},{name:'BLOG',href:""},{name:'PAGE_FIRST.CLIENTREWIEWS',href:""},{name:'PAGE_FIRST.TERMS',href:""},{name:'PAGE_FIRST.FAQ',href:""},{name:'PAGE_FIRST.CONTACTS',href:""}];
         $scope.rotateGamburger={};
+        $scope.categoriesUnlimitPackages=[{name:"UNLIMITPACKAGE_PAGE.COURIER",price:310,status:false},{name:"UNLIMITPACKAGE_PAGE.REPAIRC",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.SHIPING",price:310,status:false},
+            {name: "UNLIMITPACKAGE_PAGE.CLEANING",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.VIRTUALA",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.COMPUTER",price:310,status:false},{name: "UNLIMITPACKAGE_PAGE.EVENTS",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.DESIGN",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.WEB",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.PHOTO",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.INSTALATION",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.BEAUTY",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.REPAIRD",price:310,status:false},
+            {name:"UNLIMITPACKAGE_PAGE.LEGAL",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.EDUCATION",price:310,status:false}, {name:"UNLIMITPACKAGE_PAGE.REPAIRT",price:310,status:false}];
         $scope.toggleModal = function(param) {
             $scope.par=param;
             $scope.modalShown = !$scope.modalShown;
