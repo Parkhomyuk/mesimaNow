@@ -1,7 +1,17 @@
 {
-  "TITLE": "Освободим вас от забот!",
-  "EXECUTOR":"Исполнители",
-  "MESSAGE": "Denna app stöder ditt språk!",
+
+  "PAGE_FIRST":{
+    "TITLE": "Освободим вас от забот!",
+    "EXECUTOR":"Исполнители",
+    "MESSAGE": "Denna app stöder ditt språk!",
+    "UNLIMITPAKAGE": "Безлимитные пакеты",
+    "HOWITWORKS":"Как это работает",
+    "HOWTOBECACONTAROCTOR":"Как стать исполнителем",
+    "BLOG":"Блог" ,
+    "CLIENTREWIEWS":"Отзывы клиентов",
+    "TERMS":"Термины",
+    "FAQ":"FAQ"
+  },
   "English": "English",
   "Hebrew": "עברית",
   "Russian": "Русский"

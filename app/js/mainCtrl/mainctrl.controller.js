@@ -1,9 +1,12 @@
 angular.module('tasksList')
-    .controller('mainCtrl', function($scope,$translate){
+    .controller('mainCtrl', function($scope,$translate,$location){
         $scope.modalShown = false;
 
         $scope.logOn = 'registration';
         $scope.logIn = 'logIn';
+        $scope.openInf=false;
+        $scope.menuInf=[{name:'UNLIMITPAKAGE',href:'/unlimitedPackages'},{name:'HOWITWORKS',href:""},{name:'HOWTOBECACONTAROCTOR',href:""},{name:'BLOG',href:""},{name:'CLIENTREWIEWS',href:""},{name:'TERMS',href:""},{name:'FAQ',href:""},{name:'CONTACTS',href:""}];
+        $scope.rotateGamburger={};
         $scope.toggleModal = function(param) {
             $scope.par=param;
             $scope.modalShown = !$scope.modalShown;
@@ -11,6 +14,21 @@ angular.module('tasksList')
         $scope.contionationRegistration=function(param){
 
         }
+        $scope.openInfMenu=function(){
+            if($scope.openInf==false){
+                $scope.openInf=true;
+               /* $scope.rotateGamburger={transform: 'rotate(45deg)'}*/
+                $scope.rotateGamburger={ backgroundColor:"#d1ffed",boxShadow: "-10px 0px #d1ffed"}
+            }else{
+                $scope.openInf=false;
+                $scope.rotateGamburger={}
+            }
+        }
+            $scope.infMenuSubCat=function(href){
+                $scope.openInf=false;
+                $scope.rotateGamburger={}
+                $location.path(href);
+            }
         $scope.language = 'Russian';
         $scope.languages = ['English', 'עברית','Русский'];
         $scope.updateLanguage = function(lang) {

@@ -1,7 +1,18 @@
   {
-  "TITLE": "Free you from worries!",
-  "EXECUTOR":"Executors",
-  "MESSAGE": "This app supports your lanaguage!",
+
+  "PAGE_FIRST":{
+    "TITLE": "Free you from worries!",
+    "EXECUTOR":"Executors",
+    "MESSAGE": "This app supports your lanaguage!",
+    "UNLIMITPAKAGE": "Unlimited Packages",
+    "HOWITWORKS":"How it works",
+    "HOWTOBECACONTAROCTOR":"How to became a contractor",
+    "BLOG":"Blog" ,
+    "CLIENTREWIEWS":"Clients rewies",
+    "TERMS":"Terms",
+    "FAQ":"FAQ"
+  },
+  "CONTACTS":"",
   "English": "English",
   "Hebrew": "עברית",
   "Russian": "Русский"

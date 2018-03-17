@@ -348,6 +348,17 @@ template
   margin: 0
   padding: 0
 /*reset default*/
+/*Mixins Start*/
+@mixin flex-g_row
+  display: flex
+  flex-direction: row
+  justify-content: center
+@mixin flex-g_column
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+/*Mixins End*/
 /*navbar Start*/
 /* цвет фона и рамки навигационного меню */
 .navbar-brand 
@@ -446,7 +457,41 @@ template
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus 
   color: #d1ffed
   background-color: #d1ffed
+/* Gamburger Start*/
 
+#nav-toggle
+  margin-top: 2.5vh
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after
+  cursor: pointer
+  border-radius: 1px
+  height: 5px
+  width: 35px
+  background: white
+  position: absolute
+  display: block
+  content: ''
+#nav-toggle span:before
+  top: 1vh
+#nav-toggle span:after
+  bottom: 1vh
+#nav-toggle
+  position: relative
+#nav-toggle  div
+  width: 15vw
+  height: 30vh
+  background-color: #ffffff
+  position: absolute
+  margin-top: 3vh
+  margin-left: -160px
+.menuInf
+  list-style-type: none
+  color: #0e0e0e
+  margin: 1.2vh 0 0 0
+  font-size: 1.5rem
+  cursor: pointer
+/* Gamburger End*/
 /*navbar End*/
 .basis
   margin-right: 9vw
@@ -1118,3 +1163,26 @@ input:focus:-ms-input-placeholder
   background: #d1ffed
 
 /* end style of modal*/
+/* unlimited packages page Start*/
+.mainPageUnlimited_packages
+  margin-top: 14vh
+  width: 50%
+  margin-left: 25%
+
+.unlimited_packages_header
+  text-align: center
+.unlimited_packages_header>h1
+  font-size: 4rem
+  font-weight: bold
+.unlimited_packages_header>div
+  text-align: left
+.unlimited_packages_main_content
+  @include flex-g_row
+.main_content_offers
+  @include flex-g_column
+.main_content_offers_item
+  @include flex-g_column
+  width: 200px
+.main_content_offers_item_svg
+  color: deeppink
+/* unlimited packages page End*/

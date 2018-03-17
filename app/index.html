@@ -20,8 +20,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
             <a class="navbar-brand" href="#"> משימה</a>
         </div>
+
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
@@ -32,8 +34,19 @@
                     <a href="#/mesimot">Все задания</a>
                 </li>
                 <li>
-                   <a href="#">{{"EXECUTOR" | translate}}</a>
+                   <a href="#">{{"PAGE_FIRST.EXECUTOR" | translate}}</a>
 
+                </li>
+                <li>
+                    <div id='nav-toggle' href="#" >
+                        <span ng-click="openInfMenu()" ng-style="rotateGamburger" ></span>
+                        <div class="menu" ng-if="openInf">
+                            <ul>
+                                <li class="menuInf" ng-repeat="inf in menuInf" ng-click="infMenuSubCat(inf.href)">{{inf.name | translate}}</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </li>
 
 
@@ -123,6 +136,11 @@
 <script src="js/filters/customFilters.filter.js"></script>
 <script src="libs/ngmap/build/scripts/ng-map.min.js"></script>
 <script src="js/languages/translateProvider.config.js"></script>
+    <!--<script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>-->
+
+
 <!--<script src="http://maps.google.com/maps/api/js"></script>-->
 <!--
 <script async defer

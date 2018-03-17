@@ -17,6 +17,9 @@ angular.module('tasksList',['ngMap','ngAnimate',"ngRoute","ui.bootstrap",'pascal
         $routeProvider.when("/mesimot",{
             templateUrl:"views/mesimaList.html"
         });
+        $routeProvider.when("/unlimitedPackages",{
+            templateUrl:"views/unlilimitedPackages.html"
+        });
         $routeProvider.otherwise({
             templateUrl:"views/firstPage.html"
         })

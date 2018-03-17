@@ -1,7 +1,17 @@
 {
-  "TITLE": "לשחרר אותך מדאגות",
-  "EXECUTOR":"מציגים",
-  "MESSAGE": "Denna app stöder ditt språk!",
+
+  "PAGE_FIRST":{
+    "TITLE": "לשחרר אותך מדאגות",
+    "EXECUTOR":"מציגים",
+    "MESSAGE": "Denna app stöder ditt språk!",
+    "UNLIMITPAKAGE": "Unlimited Packages",
+    "HOWITWORKS":"How it works",
+    "HOWTOBECACONTAROCTOR":"How to became a contractor",
+    "BLOG":"Blog" ,
+    "CLIENTREWIEWS":"Clients rewies",
+    "TERMS":"Terms",
+    "FAQ":"שאלות נפוצות"
+  },
   "English": "English",
   "Hebrew": "עברית",
   "Russian": "Русский"
