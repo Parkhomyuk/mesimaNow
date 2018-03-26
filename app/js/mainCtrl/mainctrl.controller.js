@@ -70,7 +70,25 @@ angular.module('tasksList')
         var rootRef= firebase.database().ref().child('angular');
         var ref=rootRef.child('object');
         $scope.object=$firebaseObject(ref);
+        $scope.name=  aut.getUser() ;
         /*firebase end*/
-        $scope.name=aut.getUser();
+        $scope.endRegistration=function(){
+            for(var k in  $scope.name ){
+                console.log(' kkkk '+k+'=>'+  $scope.name[k]);
+            }
+            $scope.name.$loaded().then(function() {
+                console.log("loaded record:",  $scope.name.$id,  $scope.name.someOtherKeyInData);
+                });
+            angular.forEach($scope.name, function(value, key) {
+                console.log('kj,v '+key, value);
+            });
+
+
+            console.log('$scope.name.name '+  $scope.name.name);
+
+        }
+
+
+
 
     });
