@@ -3,14 +3,21 @@
   "PAGE_FIRST":{
     "TITLE": "Free you from worries!",
     "EXECUTOR":"Executors",
+    "LANGUAGE":"Languages",
     "MESSAGE": "This app supports your lanaguage!",
+    "ENTRANCE":"Entrance",
+    "CHECKIN":"Check In",
+    "WHEREIAM":"Where am I?",
+    "CREATEANASSIGMENT":"Create an assignment",
+    "ALLASSIGNMENTS":"All assignments",
     "UNLIMITPAKAGE": "Unlimited Packages",
     "HOWITWORKS":"How it works",
     "HOWTOBECACONTAROCTOR":"How to became a contractor",
     "BLOG":"Blog" ,
     "CLIENTREWIEWS":"Clients rewies",
     "TERMS":"Terms",
-    "FAQ":"FAQ"
+    "FAQ":"FAQ",
+    "CONTACTS":"Contacts"
   },
    "UNLIMITPACKAGE_PAGE":{
      "COURIER":"Courier services",
@@ -30,7 +37,7 @@
      "EDUCATION": "Tutoring and education",
      "REPAIRT": "Repair of transport"
    } ,
-  "CONTACTS":"",
+
   "English": "English",
   "Hebrew": "עברית",
   "Russian": "Русский"

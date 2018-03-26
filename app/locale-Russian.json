@@ -3,14 +3,21 @@
   "PAGE_FIRST":{
     "TITLE": "Освободим вас от забот!",
     "EXECUTOR":"Исполнители",
+    "LANGUAGE":"Язык",
     "MESSAGE": "Denna app stöder ditt språk!",
+    "ENTRANCE":"Вход",
+    "CHECKIN":"Регистрация",
+    "WHEREIAM":"Куда я попал?",
+    "CREATEANASSIGMENT":"Создать задание",
+    "ALLASSIGNMENTS":"Все задания",
     "UNLIMITPAKAGE": "Безлимитные пакеты",
     "HOWITWORKS":"Как это работает",
     "HOWTOBECACONTAROCTOR":"Как стать исполнителем",
     "BLOG":"Блог" ,
     "CLIENTREWIEWS":"Отзывы клиентов",
     "TERMS":"Термины",
-    "FAQ":"FAQ"
+    "FAQ":"FAQ",
+    "CONTACTS":"Контакты"
   },
   "UNLIMITPACKAGE_PAGE":{
     "COURIER":"Курьерские услуги",

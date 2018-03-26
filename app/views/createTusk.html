@@ -1,0 +1,262 @@
+
+ <div class="createTask_maind" ng-controller="createMesimaFormsCtrl">
+     <div class="createTask_header">
+         <div class="createTask_Header_inf">
+             <h1> - Ищете курьера на день?</h1>
+         </div>
+         <ol class="new_tasks">
+             <li class="new_task">
+                 <div class="new_task_header">  1 </div>
+                 <div class="new_task_body">
+                     <h4 class="new_task_title">Заполните заявку</h4>
+                     <p class="new_task_description">Мы быстро оповестим <br>исполнителей  о вашей заявке.</p>
+                 </div>
+
+             </li>
+             <li class="new_task">
+                 <div class="new_task_header">  2 </div>
+                 <div class="new_task_body">
+                 <h4 class="new_task_title">Получите предложения</h4>
+                 <p class="new_task_description">Заинтересованные исполнители <br>предложат вам свои услуги.</p>
+                 </div>
+             </li>
+             <li class="new_task">
+                 <div class="new_task_header">  3 </div>
+                 <div class="new_task_body">
+                 <h4 class="new_task_title">Выберите исполнителя</h4>
+
+                 <p class="new_task_description">Выберите подходящее для вас<br>предложение по цене <br>или рейтингу исполнителя.</p>
+                 </div>
+             </li>
+         </ol>
+
+     </div>
+     <div class="createTask_body">
+         <div class="forms panel panel-success">
+        <section>
+            <h1>Заполните заявку</h1>
+            <form>
+                <div class="form-group createTask_body_need ">
+                    <label for="formGroupNeedInput">Мне нужно</label>
+                    <input type="text" class="form-control" id="formGroupNeedInput" placeholder="Нужен курьер нв день">
+                </div>
+
+                <div class="form-group createTask_body_need_select">
+                    <div class=""  >
+                        <select class="form-control form-control-sm">
+                            <option>Small select</option>
+                            <option>Small select1</option>
+                            <option>Small select2</option>
+                        </select>
+                    </div>
+                    <div class=""  >
+                        <select class="form-control form-control-sm"  >
+                            <option>Small select</option>
+                            <option>Small select1</option>
+                            <option>Small select2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-xs-3 parametr">
+                        <!--<input type="text" class="form-control" placeholder="Вес грузаб кг">-->
+                        <select class="form-control form-control-sm"  >
+                            <option>Вес посылки</option>
+                            <option>до 3 кг.</option>
+                            <option>от 3 до 10 кг.</option>
+                            <option>более 10 кг.</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-3 parametr">
+                        <input type="text" class="form-control" placeholder="Длина,м">
+                    </div>
+                    <div class="col-xs-3 parametr">
+                        <input type="text" class="form-control" placeholder="Ширина,м">
+                    </div>
+                    <div class="col-xs-3 parametr">
+                        <input type="text" class="form-control" placeholder="Высота,м">
+                    </div>
+                </div>
+                <div class="form-group createTask_body_need_value ">
+                    <label for="formGroupExampleInput1">Ценность посылки</label><br>
+                    <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Example input">
+                    <span>
+                        <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-caret-left fa-2x tringle" aria-hidden="true"></i>
+                        <span class="createTask_body_need_value_alert">
+                    <p>Это поможет можти исполнителей, готовых взяться за ваш заказ.</p>
+                        </span>
+                    </span>
+                </div>
+                <div class="form-group createTask_body_needTextarea">
+                    <label for="createTask_body_needTextarea">Опишите пожелания и детали, чтобы исполнители лучше оценили вашу задачу</label>
+                    <textarea class="form-control" id="createTask_body_needTextarea" rows="5" placeholder="Укажите детали: количество доставок, продолжительность рабочего дня."></textarea>
+                </div>
+                <div class="createTask_body_take_pay">
+                    <label class="switch ">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="text">
+                          <p>Забрать у получателя оплату за товар  и вернуть заказчику</p>
+                    </div>
+                </div>
+                <div class="createTask_body_time">
+                    <select class="form-control form-control-sm"  >
+                        <option>Начать работу</option>
+                        <option>Завершить работу</option>
+                    </select>
+                    <!--<div class=" ">
+                        <p class="input-group">
+                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                          </span>
+                        </p>
+                    </div>
+                </div>
+
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+            </div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <p>Требуется погрузка / разгрузка</p>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Опишите пожелания и детали, чтобы исполнители лучше оценили вашу задачу</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+               <p>Дополнительно потребуется</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckboxD" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <p>Дата и время</p>
+                <select class="form-control form-control-sm">
+                    <option>Начать работу</option>
+                    <option>Small select1</option>
+                    <option>Small select2</option>
+                </select>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Example label</label>
+                    <input type="date" атрибуты>
+                </div>
+                <div class="input-group date" id="datetimepicker6">
+                    <span class="input-group-addon datepickerbutton">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                    <input type="text" class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </span>
+                </div>
+                <div class="input-group date" id="datetimepicker4">
+                    <span class="input-group-addon datepickerbutton">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    <input type="text" class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </span>
+                </div>
+                &lt;!&ndash;datapicker&ndash;&gt;
+                <div>
+                    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+                    <h4>Inline</h4>
+                    <div style="display:inline-block; min-height:290px;">
+                        <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+                    </div>
+
+                    <hr />
+                    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+                    <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+                    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+                    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+                </div>-->
+                <!--datapicker-->
+                    <div style="margin-top: 4vh">
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+                                </p>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" style="margin-top: -4vh"></div>
+
+                                <!--<pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>-->
+
+                                <!--<div class="row">
+                                    <div class="col-xs-6">
+                                        Hours step is:
+                                        <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        Minutes step is:
+                                        <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+                                    </div>
+                                </div>-->
+
+                                <!--<hr>
+
+                                <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+                                <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+                                <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>-->
+                            </div>
+                        </div>
+
+                    <!--datapicker-->
+                        </div>
+                    <div class="form-group createTask_body_need ">
+                        <label for="formGroupAddressInput">Адрес</label>
+                        <input type="text" class="form-control" id="formGroupAddressInput" placeholder="Улица, дом, строение , корпус">
+                    </div>
+                    <div class="form-group createTask_body_need_value ">
+                        <label for="formGroupCostInput">Укажите точную стоимость задания</label><br>
+                        <input type="text" class="form-control" id="formGroupCostInput" placeholder="">
+                    <span>
+                       <p>NIS</p>
+                    </span>
+                    </div>
+
+                {{object | json}}
+                {{object.name}}
+
+            </div>
+            </form>
+        </section>
+
+         </div>
+         <div class="helps">
+             <h3>Частые вопросы</h3>
+             <div class="new_task-questions">
+             <div> <a>Сколько предложений я получу?</a></div>
+             <div> <a>Обязательно ли выбирать исполнителя?</a></div>
+             <div><a>Как оплачивать услуги?</a></div>
+             <div><a>Как выбрать надежного исполнителя?</a></div>
+             <div><a>Как не выбрать исполнителем мошенника?</a></div>
+             </div>
+         </div>
+     </div>
+ </div>

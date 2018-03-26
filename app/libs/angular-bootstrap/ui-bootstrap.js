@@ -6131,7 +6131,7 @@ angular.module('ui.bootstrap.timepicker', [])
   mousewheel: true,
   arrowkeys: true,
   showSpinners: true,
-  templateUrl: 'uib/template/timepicker/timepicker.html'
+  templateUrl: '/template/timepicker/timepicker.html'
 })
 
 .controller('UibTimepickerController', ['$scope', '$element', '$attrs', '$parse', '$log', '$locale', 'uibTimepickerConfig', function($scope, $element, $attrs, $parse, $log, $locale, timepickerConfig) {

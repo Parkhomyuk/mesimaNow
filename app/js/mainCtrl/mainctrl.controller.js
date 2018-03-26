@@ -1,11 +1,12 @@
 angular.module('tasksList')
-    .controller('mainCtrl', function($scope,$translate,$location){
+    .controller('mainCtrl', function($scope,$translate,$location,$firebaseObject,aut){
         $scope.modalShown = false;
 
         $scope.logOn = 'registration';
         $scope.logIn = 'logIn';
         $scope.openInf=false;
-        $scope.menuInf=[{name:'PAGE_FIRST.UNLIMITPAKAGE',href:'/unlimitedPackages'},{name:'PAGE_FIRST.HOWITWORKS',href:""},{name:'PAGE_FIRST.HOWTOBECACONTAROCTOR',href:""},{name:'BLOG',href:""},{name:'PAGE_FIRST.CLIENTREWIEWS',href:""},{name:'PAGE_FIRST.TERMS',href:""},{name:'PAGE_FIRST.FAQ',href:""},{name:'PAGE_FIRST.CONTACTS',href:""}];
+        $scope.createAssignment=false;
+        $scope.menuInf=[{name:'PAGE_FIRST.UNLIMITPAKAGE',href:'/unlimitedPackages'},{name:'PAGE_FIRST.HOWITWORKS',href:""},{name:'PAGE_FIRST.HOWTOBECACONTAROCTOR',href:""},{name:'PAGE_FIRST.BLOG',href:""},{name:'PAGE_FIRST.CLIENTREWIEWS',href:""},{name:'PAGE_FIRST.TERMS',href:""},{name:'PAGE_FIRST.FAQ',href:""},{name:'PAGE_FIRST.CONTACTS',href:""}];
         $scope.rotateGamburger={};
         $scope.categoriesUnlimitPackages=[{name:"UNLIMITPACKAGE_PAGE.COURIER",price:310,status:false},{name:"UNLIMITPACKAGE_PAGE.REPAIRC",price:310,status:false},
             {name:"UNLIMITPACKAGE_PAGE.SHIPING",price:310,status:false},
@@ -19,8 +20,16 @@ angular.module('tasksList')
             $scope.par=param;
             $scope.modalShown = !$scope.modalShown;
         };
-        $scope.contionationRegistration=function(param){
-
+        $scope.openCreateAssignment=function(){
+            console.log('createAssignment '+$scope.createAssignment);
+            if( $scope.createAssignment==false){
+                $scope.createAssignment=true;
+            }else(
+                $scope.createAssignment=false
+            )
+        }
+        $scope.openCreateTusk=function(){
+            $location.path('/createTusk');
         }
         $scope.openInfMenu=function(){
             if($scope.openInf==false){
@@ -55,4 +64,13 @@ angular.module('tasksList')
             console.log($scope.language);
             console.log(lang);
         };
+
+
+        /*firebase start*/
+        var rootRef= firebase.database().ref().child('angular');
+        var ref=rootRef.child('object');
+        $scope.object=$firebaseObject(ref);
+        /*firebase end*/
+        $scope.name=aut.getUser();
+
     });
