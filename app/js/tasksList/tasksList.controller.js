@@ -49,7 +49,7 @@ angular.module('tasksList')
         }
 
             $scope.showSubMenu=function(categ){
-
+                $scope.currentPage=1;
                 if(categ==undefined){
                     console.log('Home');
                      selectedCategory=null;

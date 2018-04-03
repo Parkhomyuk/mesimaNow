@@ -1,4 +1,4 @@
-<div class="end-registration-temp"></div>
+<div class="end-registration-temp" ng-controller="mainCtrl" >
 <div class="headerEndRegistration">
     <h3>Завершение регистрации</h3>
 </div>
@@ -13,8 +13,8 @@
         <div class="middle"> <div class="line"></div><div class="or_end_registr">or</div><div class="line"></div> </div>
         <div class="fill_end_registration">
             <div class="login-email">
-            <input type="text" placeholder="Имя Фамилия" class="form-input" >
-            <input type="email" placeholder="E-mail" >
+            <input type="text" placeholder="Имя Фамилия" class="form-input" ng-model="password">
+            <input type="email" placeholder="E-mail" ng-model="email">
             <input type="tel" placeholder="Your Phone" >
             <input type="text" placeholder="City" >
                 <div class="downLoadPhoto">
@@ -24,7 +24,7 @@
                     <input style="opacity: 0; z-index: -1;" type="file" name="upload" id="uploadbtn">
 
                 </div>
-            <button class="btn btn-default reg-button" ng-click="endRegistration()">Зарегистрироваться</button>
+            <button class="btn btn-default reg-button" ng-click="endRegistration();createUser()">Зарегистрироваться</button>
         </div>
         </div>
     </div>

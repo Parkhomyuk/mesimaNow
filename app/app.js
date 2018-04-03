@@ -1,5 +1,5 @@
 (function(){
-    var config = {
+   var config = {
         apiKey: "AIzaSyCYpva3oynrAIBf4mdrrDxMSwjjjy4G-rE",
         authDomain: "mesima-198312.firebaseapp.com",
         databaseURL: "https://mesima-198312.firebaseio.com",
@@ -8,6 +8,7 @@
         messagingSenderId: "670443172095"
     };
     firebase.initializeApp(config);
+    firebase.auth().useDeviceLanguage();
     angular.module('tasksList',['ngMap','ngAnimate',"ngRoute","ui.bootstrap",'pascalprecht.translate',"ui.bootstrap.timepicker","ui.bootstrap.datepicker",'firebase'])
         .constant("dataUrl","data.json")
         .constant("pageCount",5)

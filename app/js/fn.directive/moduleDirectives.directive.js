@@ -11,6 +11,15 @@ angular.module('tasksList')
             transclude: true,
             link: function(scope,element, attrs){
                 console.log('scope directive '+scope.par);
+                console.log('scope directive '+scope.show);
+                scope.$watch('show', function(newValue, oldValue){
+                    console.log(newValue+' newValue');
+                    scope.show=newValue;
+                })
+                scope.$watch('par', function(newValue, oldValue){
+                    console.log(newValue+' newValue');
+                    scope.par=newValue;
+                })
                 scope.dialogStyle = {};
 
                 if (attrs.width)

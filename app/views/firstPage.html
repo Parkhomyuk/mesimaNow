@@ -9,7 +9,7 @@
         <div class="b-hero-video__formbox">
             <form action="/tasks/suggest" class="js-hero-form" autocomplete="off" method="POST" novalidate="novalidate">
 
-                <div class="b-hero-video__form js-hero-input-block">
+                <div class="b-hero-video__form js-hero-input-block" ng-style="hebrew">
                     <div class="b-hero-video__input">
                         <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                         <input type="text" class="js-hero-input ui-autocomplete-input" name="text" maxlength="220" placeholder="Напишите, чем вам помочь…" autocomplete="off">
@@ -22,9 +22,9 @@
         </div>
         <!-- /.hero-video__formbox -->
         <!-- /.hero-video__form -->
-        <div class="b-hero-video__example">Например: <span class="js-hero-example" data-id="18">собрать шкаф</span>
+        <div class="b-hero-video__example"  >{{'FREE_TEXT.EXAMPLE' | translate}} <span class="js-hero-example" data-id="18">{{'FREE_TEXT.FORNITURE' | translate}}</span>
         </div>
-        <a href="/verification" class="b-hero-video__gowork js-stay-executor"><span>стать исполнителем и начать зарабатывать</span></a>
+        <a href="/verification" class="b-hero-video__gowork js-stay-executor"><span>{{'FREE_TEXT.JOIN' | translate}}</span></a>
     </div>
 
 
@@ -38,73 +38,74 @@
     <!-- /.hero-video__keeper -->
 
 </div>
-<div class="container">
+<div class="container main_content">
     <div class="row nav-serv">
-        <div class="col-xs-4">
+        <div class="col-xs-12 col-md-4">
             <a href="#">
                 <div><img src="img/nav_serv1.png" class="nav-serv__image"></div>
-                <div> <h3>Удобная и безопасная оплата</h3></div>
-                <div>При оплате через Сделку без риска YouDo вернет деньги, если что-то пойдет не так.</div>
+                <div> <h3>{{'FREE_TEXT.SAFE' | translate}}</h3></div>
+                <div class="nav_serv_content">При оплате через Сделку без риска YouDo вернет деньги, если что-то пойдет не так.</div>
 
             </a>
 
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-12 col-md-4">
             <a href="#">
                 <div>
                     <div><img src="img/nav_serv2.png" class="nav-serv__image"></div>
-                    <div> <h3>Надежные исполнители</h3></div>
-                    <div>Исполнители со статусом «Паспорт подтвержден» прошли проверку документов.</div>
+                    <div> <h3>{{'FREE_TEXT.REL' | translate}}</h3></div>
+                    < <div class="nav_serv_content">Исполнители со статусом «Паспорт подтвержден» прошли проверку документов.</div>
                 </div>
 
             </a>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-12 col-md-4">
             <a href="#">
                 <div><img src="img/nav_serv3.png" class="nav-serv__image"></div>
-                <div><h3> Достоверные отзывы</h3></div>
-                <div>Более 1 000 000 отзывов от заказчиков помогут выбрать подходящего исполнителя.</div>
+                <div><h3> {{'FREE_TEXT.OTHER' | translate}}</h3></div>
+                 <div class="nav_serv_content">Более 1 000 000 отзывов от заказчиков помогут выбрать подходящего исполнителя.</div>
             </a>
         </div>
     </div>
 </div>
-<div class="container services">
+<div class="container services" ng-style="hebrew">
     <div class="row">
-        <div class="col-xs-3">
-            <i class="fa fa-grav" aria-hidden="true"></i>
-            Курьерские услуги
+        <div class="col-xs-12 col-md-3 service_title" >
+            <i class="fa fa-grav" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COURIER' | translate}}</div>
+
         </div>
-        <div class="col-xs-3">
-            <i class="fa fa-cog" aria-hidden="true"></i> Ремонт и строительство</div>
-        <div class="col-xs-3"> <i class="fa fa-truck" aria-hidden="true"></i>Грузоперевозки</div>
-        <div class="col-xs-3"><i class="fa fa-shower" aria-hidden="true"></i>Уборка</div>
+        <div class="col-xs-12 col-md-3 service_title">
+            <i class="fa fa-cog" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.REPAIRC' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-truck" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.SHIPING' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-shower" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.CLEANING' | translate}}</div></div>
     </div>
     <div class="row">
-        <div class="col-xs-3"><i class="fa fa-desktop" aria-hidden="true"></i>Компьютерная помощь</div>
-        <div class="col-xs-3">
-            <i class="fa fa-camera" aria-hidden="true"></i>
-            Фото- и виде- усдуги</div>
-        <div class="col-xs-3"><i class="fa fa-globe" aria-hidden="true"></i>Web- разработка</div>
-        <div class="col-xs-3"><i class="fa fa-plug" aria-hidden="true"></i>Установка и ремонт техники</div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-desktop" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COMPUTER' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title">
+            <i class="fa fa-camera" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.PHOTO' | translate}}</div>
+           </div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-globe" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.WEB' | translate}}</div></div>
+
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-plug" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.INSTALATION' | translate}}</div></div>
     </div>
     <div class="row">
-        <div class="col-xs-3"> <i class="fa fa-rocket" aria-hidden="true"></i>Мероприятия и промо-акции</div>
-        <div class="col-xs-3"><i class="fa fa-paint-brush" aria-hidden="true"></i>Дизайн</div>
-        <div class="col-xs-3"><i class="fa fa-male" aria-hidden="true"></i>Виртуальный помощник</div>
-        <div class="col-xs-3"><i class="fa fa-television" aria-hidden="true"></i>Ремонт цифровой техники</div>
+        <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-rocket" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.EVENTS' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-paint-brush" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.DESIGN' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-male" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.VIRTUALA' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-television" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.REPAIRD' | translate}}</div></div>
     </div>
     <div class="row">
-        <div class="col-xs-3"><i class="fa fa-smile-o" aria-hidden="true"></i>Красота и здоровье</div>
-        <div class="col-xs-3"><i class="fa fa-book" aria-hidden="true"></i>Юридическая помощь</div>
-        <div class="col-xs-3"> <i class="fa fa-car" aria-hidden="true"></i> Ремонт транспорта</div>
-        <div class="col-xs-3"><i class="fa fa-sign-language" aria-hidden="true"></i>Репетиторы и образование</div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-smile-o" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.BEAUTY' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-book" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.LEGAL' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-car" aria-hidden="true" ng-style="hebrewMargin"> </i><div class=""> {{'UNLIMITPACKAGE_PAGE.REPAIRT' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-sign-language" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.EDUCATION' | translate}}</div></div>
     </div>
     <div class="container">
 
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <button class="btn btn-block btn-outline-primary">All categories</button>
+                <button class="btn btn-default allCatBat">All categories</button>
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -112,86 +113,107 @@
 </div>
 <div class="container instruction">
     <div class="instruction_title">
-        <h1>С YouDo вы экономите на услугах до 70%.</h1>
-        <h1>Как это возможно?</h1>
+        <h1 class="instruction_title1">{{'FREE_TEXT.COST1' | translate}}</h1>
+        <h1 class="instruction_title2">{{'FREE_TEXT.HOW' | translate}}</h1>
+    </div>
+    <div class="row tasck" >
+
+        <div class="col-xs-12 col-md-6 "><img src="img/hiw-1.png"></div>
+        <div class="col-xs-12 col-md-6  tasck_text">
+            <h2>1. {{'FREE_TEXT.CREATE' | translate}}</h2>
+            <div> {{'FREE_TEXT.DESCRIBE' | translate}}</div>
+            <a>{{'FREE_TEXT.CREATE' | translate}}</a>
+        </div>
+
     </div>
     <div class="row tasck">
-
-        <div class="col-md-6 "><img src="img/hiw-1.png"></div>
-        <div class="col-md-6  tasck_text">
-            <h2>1. Создайте задание</h2>
-            <div>Опишите своими словами задачу, <br>которую требуется выполнить.</div>
-            <a>Создать задание</a>
+        <div class="col-xs-12 col-md-6 "><img src="img/hiw-2.png"></div>
+        <div class="col-xs-12 col-md-6 tasck_text">
+            <h2>2. {{'FREE_TEXT.OFFER' | translate}}</h2>
+            <div> {{'FREE_TEXT.RECEIVE' | translate}}</div>
+            <a>{{'FREE_TEXT.CREATE' | translate}}</a>
         </div>
 
     </div>
     <div class="row tasck">
 
-
-        <div class="col-md-6 tasck_text">
-            <h2>2.  Исполнители предложат вам свои услуги и цены</h2>
-            <div>Уже через пару минут вы начнете получать <br>предложения от исполнителей, готовых <br> выполнить ваше задание.</div>
-            <a>Создать задание</a>
-        </div>
-        <div class="col-md-6 "><img src="img/hiw-2.png"></div>
-    </div>
-    <div class="row tasck">
-
-        <div class="col-md-6 "><img src="img/hiw-3.png"></div>
-        <div class="col-md-6  tasck_text">
-            <h2>3. Выберите лучшее предложение</h2>
-            <div >Вы сможете выбрать подходящего  <br>  исполнителя, по разным критериям:</div>
+        <div class="col-xs-12 col-md-6 "><img src="img/hiw-3.png"></div>
+        <div class="col-xs-12 col-md-6  tasck_text">
+            <h2>3.{{'FREE_TEXT.BEST' | translate}}</h2>
+            <div >{{'FREE_TEXT.ABLE' | translate}}</div>
             <div class="row">
-                <div class="col-md-6">Стоимость услуг </div>
-                <div class="col-md-6">Отзывы заказчиков</div>
+                <div class="col-md-6"><i class="fa fa-money" aria-hidden="true"></i>{{'FREE_TEXT.COST' | translate}} </div>
+                <div class="col-md-6"><i class="fa fa-hand-paper-o" aria-hidden="true"></i>{{'FREE_TEXT.REVIEWS' | translate}}</div>
             </div>
             <div class="row">
-                <div class="col-md-6">Рейтинг</div>
-                <div class="col-md-6">Примеры работ</div>
+                <div class="col-md-6"><i class="fa fa-star-o" aria-hidden="true"></i>{{'FREE_TEXT.RATING' | translate}}</div>
+                <div class="col-md-6"><i class="fa fa-user-o" aria-hidden="true"></i>{{'FREE_TEXT.WORK' | translate}}</div>
             </div>
-
+            <button class="btn btn-warning tasck_create_button">{{'FREE_TEXT.CREATE' | translate}}</button>
+            <p>и найдите исполнителя за несколько минут</p>
         </div>
 
     </div>
+
 </div>
-<div class=" benefit" style="padding: 2vh 0 2vh 0">
-    <div class="benifit_header"><h1>Основные преимущества YouDo</h1></div>
+</div>
+<div class="benefit" style="padding: 2vh 0 2vh 0; margin: 0 0 0 0; width: 100vw">
+    <div class="benifit_header"><h1>{{'FREE_TEXT.MAIN' | translate}}</h1></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-9">
-                <div><h3>Выгодные цены</h3></div>
-                <div><p>У частных исполнителей нет расходов на офис, рекламу, зарплату секретарю и других затрат, которые сервисные компании обычно включают в стоимость своих услуг.</p></div>
+
+            <div class="col-md-12 " ng-style="hebrew" >
+                <div class="benefit_item">
+                    <i class="fa fa-rocket" aria-hidden="true" ng-style="hebrewMargin"></i><div>{{'FREE_TEXT.SERV1' | translate}}</div>
+                </div>
+                <div class="benefit_item">
+                    <i class="fa fa-search" aria-hidden="true" ng-style="hebrewMargin"></i><div>{{'FREE_TEXT.SERV2' | translate}}</div>
+                </div>
+                <div class="benefit_item">
+                    <i class="fa fa-clock-o" aria-hidden="true" ng-style="hebrewMargin"></i><div>{{'FREE_TEXT.SERV3' | translate}}</div>
+                </div>
+                <!--<div><p>У частных исполнителей нет расходов на офис, рекламу, зарплату секретарю и других затрат, которые сервисные компании обычно включают в стоимость своих услуг.</p></div>-->
+                <!--//</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-md-3"></div>-->
+                <!--<div class="col-md-9">-->
+                <!--<div><h3>Проверенные исполнители</h3></div>-->
+                <!--<div><p>Все исполнители YouDo проходят процедуру верификации, мы проверяем отзывы, разбираемся с жалобами и контролируем качество их работы.</p></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-md-3"></div>-->
+                <!--<div class="col-md-9">-->
+                <!--<div><h3>Экономия времени</h3></div>-->
+                <!--<div><p>На YouDo вы можете найти подходящего исполнителя за несколько минут. Многие из них готовы приступить к работе в тот же день, а иногда в тот же час.</p></div>-->
+                <!--</div>-->
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-9">
-                <div><h3>Проверенные исполнители</h3></div>
-                <div><p>Все исполнители YouDo проходят процедуру верификации, мы проверяем отзывы, разбираемся с жалобами и контролируем качество их работы.</p></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-9">
-                <div><h3>Экономия времени</h3></div>
-                <div><p>На YouDo вы можете найти подходящего исполнителя за несколько минут. Многие из них готовы приступить к работе в тот же день, а иногда в тот же час.</p></div>
-            </div>
-        </div>
+
     </div>
-
-</div>
-<div class="app_mobile" style="margin-bottom: 50vh">
-    <div class="row container">
-        <div class="col-md-10">
-            <h1>A personal assistant in your pocket</h1>
-            <div><h4>Download our app and use YouDo wherever you are.</h4></div>
+    <!--<div class="app_mobile" style="margin-bottom: 50vh">
+        <div class="row container">
+            <div class="col-md-10">
+                <h1>A personal assistant in your pocket</h1>
+                <div><h4>Download our app and use YouDo wherever you are.</h4></div>
 
 
+            </div>
+            <div class="col-md-2" >
+                <img src="img/download_hand_en.png"  style="position: absolute; top: -5vh;" >
+            </div>
         </div>
-        <div class="col-md-2" >
-            <img src="img/download_hand_en.png"  style="position: absolute; top: -5vh;" >
-        </div>
+
+    </div>-->
     </div>
-
+<div class="firsrPage_mesimaList">
+    <h1>Что заказывают на Месима прямо сейчас</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Содержимое панели
+        </div>
+        <div class="panel-footer">Панель подвала</div>
+    </div>
 </div>
+

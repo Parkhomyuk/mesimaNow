@@ -17,7 +17,8 @@
     "CLIENTREWIEWS":"Clients rewies",
     "TERMS":"Terms",
     "FAQ":"FAQ",
-    "CONTACTS":"Contacts"
+    "CONTACTS":"Contacts",
+    "HELPS":"WE HELP YOU "
   },
    "UNLIMITPACKAGE_PAGE":{
      "COURIER":"Courier services",
@@ -35,8 +36,35 @@
      "REPAIRD": "Repair of digital equipment",
      "LEGAL": "Legal assistance",
      "EDUCATION": "Tutoring and education",
-     "REPAIRT": "Repair of transport"
+     "REPAIRT": "Repair of transport",
+     "ORDER_SERVISE": "ORDER SERVISE",
+     "DESCRIBE": "Describe your assignment..."
    } ,
+    "FREE_TEXT": {
+      "COST1": "With MESIMA you significantly save on the cost of services",
+      "JOIN": "will join the service and start making money",
+      "EXAMPLE": "example:",
+      "FORNITURE":"assemble furniture",
+      "HOW":"How does this work?",
+      "CREATE":"Create an assignment",
+      "DESCRIBE":"Describe in your own words the task, which you want to perform.",
+      "OFFER":"Specialists will offer you their     services and prices",
+      "RECEIVE":"In a few minutes you will begin to receive offers from specialists, ready-made fulfill your task",
+      "BEST":"Choose the best offer",
+      "ABLE":"You will be able to choose a suitable specialist, according to different criteria:",
+      "COST":"Cost of services",
+      "REVIEWS":"Reviews",
+      "RATING":"Rating",
+      "WORK":"Examples of work",
+      "SERV1":"Service, is designed for convenient and quick search of performers for any household and business tasks. We place the assignment on the service and immediately begin to receive offers from performers ready to perform your task.",
+      "SERV2":" Now you do not need to look for a master, a courier, a carrier, a nurse. They will find you, make an offer, and you will choose the best performer.  ",
+      "SERV3":"The service will offer you a solution for any tasks at a time convenient for you and at reasonable prices.The service operates all over Israel.",
+      "MAIN":"MAIN ADVANTAGES OF THE PROJECT",
+      "SAFE":"Convenient and safe payment",
+      "REL":"Reliable performers",
+      "OTHER":"Other assignments"
+    },
+
 
   "English": "English",
   "Hebrew": "עברית",

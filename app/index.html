@@ -18,16 +18,28 @@
 </head>
 <body ng-controller="mainCtrl" ng-cloak>
 <nav class="navbar navbar-default navbar-fixed-top" >
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+    <div class="container" >
+        <div class="navbar-header"  >
+            <button type="button" class="navbar-toggle collapsed"   data-target="#navbar-collapse" ng-click="openMobileMenu()" >
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#"> משימה</a>
+            <a class="navbar-brand"  href="#">  משימה</a>
+            <div class="dropdown-gamburger_main" ng-if="statusMobileMenu"  >
+                <div class="close_dropdown-gamburger_main" ng-click="closeMobileMenu()"  ><i class="fa fa-times" aria-hidden="true"></i></i></div>
+                <ul>
+                    <li><a class="subMenu">{{'PAGE_FIRST.CREATEANASSIGMENT' | translate}} <span class="sr-only">(current)</span></a></li>
+                    <li><a class="subMenu" href="#/mesimot">{{'PAGE_FIRST.ALLASSIGNMENTS' | translate}}</a></li>
+                    <li><a class="subMenu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{'PAGE_FIRST.WHEREIAM' | translate}}<span class="caret"></span></a></li>
+                    <li><a class=" subMenu b-toolbar__authorization__link js-btnRegistration" href=""   ng-click='toggleModal(logOn)'>{{'PAGE_FIRST.CHECKIN' | translate}} </a></li>
+                    <li><a class=" subMenu b-toolbar__authorization__link js-btnLogin" href=""   ng-click='toggleModal(logIn)'>{{'PAGE_FIRST.ENTRANCE' | translate}}</a></li>
+                    <li>Language</li>
+                    <li class='dropdown-gamburger_main_subMenu'ng-repeat="lang in languages" ng-click="updateLanguage(lang)"><a class="subMenu" >{{lang}}</a></li>
+                </ul>
+            </div>
         </div>
 
 
@@ -41,10 +53,10 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="allAssig">
                     <a href="#/mesimot">{{'PAGE_FIRST.ALLASSIGNMENTS' | translate}}</a>
                 </li>
-                <li>
+                <li class="nav_bar_executors">
                    <a href="#">{{"PAGE_FIRST.EXECUTOR" | translate}}</a>
 
                 </li>
@@ -63,7 +75,7 @@
 
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right whereIam">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
 
@@ -78,12 +90,12 @@
                         <li><a href="#">Подпункт 1.5</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a class="b-toolbar__authorization__link js-btnRegistration" href=""   ng-click='toggleModal(logOn)'>{{'PAGE_FIRST.CHECKIN' | translate}} </a>
+                <li ng-controller="registrationCtrl">
+                    <a class="b-toolbar__authorization__link js-btnRegistration" href=""    ng-click='toggleModal(logOn)' ng-if="name==null">{{'PAGE_FIRST.CHECKIN' | translate}} </a>
 
                 </li>
-                <li>
-                    <a class="b-toolbar__authorization__link js-btnLogin" href=""   ng-click='toggleModal(logIn)'>{{'PAGE_FIRST.ENTRANCE' | translate}}</a>
+                <li ng-controller="registrationCtrl">
+                    <a class="b-toolbar__authorization__link js-btnLogin" href=""   ng-click='toggleModal(logIn)' ng-if="name==null">{{'PAGE_FIRST.ENTRANCE' | translate}}</a>
                 </li>
                 <li class="dropdown">
                     <a   class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -97,12 +109,12 @@
 
                     </ul>
                 </li>
-                <li class="header_userPhoto">
-                    <ul>
+                <li class="header_userPhoto"  ng-controller="registrationCtrl" ng-style="hebrew">
+                    <ul ng-if="name!=null">
                         <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
                         <li><i class="fa fa-commenting-o" aria-hidden="true"></i></li>
                         <li><img src="img/avatar_white.png"></li>
-                        <li><p>{{name.name}}</p></li>
+                        <li ng-click="sigOut()" ng-model="name"><p>{{name}}</p></li>
                     </ul>
 
                 </li>
@@ -115,9 +127,75 @@
 </nav>
 
 <ng-view></ng-view>
-<div class="col-xs-12">
-    <ng-include src="'views/social.html'"></ng-include>
-</div>
+<footer class="footer" ng-style="hebrew">
+
+    <div class="item_footer how">
+        <h1>Как тут все устроено</h1>
+        <a class="how_a">Как стать исполнителем</a>
+        <a>Безлимитные пакеты</a>
+        <a>Как это работает</a>
+        <a>Сделка без риска</a>
+        <a>Исполнители для бизнеса</a>
+        <a>Безопасность и гарантии</a>
+        <a>Награды и рейтинг</a>
+        <a>Отзывы исполнителей</a>
+        <a>Отзывы заказчиков</a>
+    </div>
+    <div class="item_footer company">
+        <h2>Компания</h2>
+        <a>Наш блог</a>
+        <a>Вакансии</a>
+        <a>Контакты</a>
+        <a>СМИ о нас</a>
+        <a>Реклама на сервисе</a>
+    </div>
+    <div class="item_footer support">
+        <h2>Поддержка</h2>
+        <a>Правила сервиса</a>
+        <a>Частые вопросы</a>
+    </div>
+    <div class="border_contacts">
+        <div class="item_footer contacts">
+
+            <p>+7 (495) 969 09 63  <span>Tel Aviv</span> </p>
+            <p>+7 (812) 986 95 29 <span>Haifa</span></p>
+            <p>8 (800) 700 21 57 <span>Another cities</span></p>
+            <p>пн.-пт 9:00 — 23:00</p>
+            <p>сб.-вс 9:00 — 21:00</p>
+            <p>по московскому времени</p>
+
+            <p>Эл. почта: <a>privet@mesima.com</a></p>
+
+        </div>
+    </div>
+
+    <div class="item_footer account">
+         © 2018 Mesima (mesima.com)
+    </div>
+    <!--<ng-include src="'views/social.html'"></ng-include>-->
+    <!--<div class="b-footer__sharing">
+        <div class="b-social b-footer__social">
+            <span class="b-social__text">Присоединяйтесь к нам:</span>
+            <div class="b-social__btn"><a href="https://www.facebook.com/mesima" target="_blank" class=" "><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+            <div class="b-social__btn"><a href="https://twitter.com/mesima" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+            <div class="b-social__btn"><a href="https://www.instagram.com/mesima" target="_blank" class=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+            <div class="b-social__btn_ytb"> <a href="https://www.youtube.com/user/mesima" target="_blank" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></div>
+        </div>
+    </div>
+    <footer id="Footer" class="b-footer">
+
+
+        <div class="b-footer__copyright">
+            <div class="b-footer__copyright-wrapper">
+                © 2018 Mesima (mesima.com)
+            </div>
+        </div>
+
+
+
+    </footer>-->
+
+</footer>
 <!--<footer id="Footer" class="b-footer">
 
     <div class="b-footer__inner">
@@ -131,9 +209,13 @@
 </div>
 
 </footer>-->
-<modal-dialog show='modalShown' width='350px' height='60%' par="par" paramReg="paramReg">
+<div ng-controller="registrationCtrl">
 
-</modal-dialog>
+    <modal-dialog show='modalShown.data' width='350px' height='60%' par="modalShown.par" paramReg="paramReg" >
+
+    </modal-dialog>
+</div>
+
 
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
@@ -141,7 +223,8 @@
 <script src="libs/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="libs/angular/angular.min.js"></script>
 <script src="libs/firebase/firebase.js"></script>
-<script src="libs/firebase/firebase-database.js"></script>
+<script src="libs/angularfire/dist/angularfire.min.js"></script>
+ <script src="libs/firebase/firebase-database.js"></script>
 <script src="libs/angularfire/dist/angularfire.min.js"></script>
 <script src="libs/firebaseui/dist/firebaseui.js"></script>
 <!--<script src="libs/angular-bootstrap/ui-bootstrap.min.js"></script>-->
@@ -159,6 +242,7 @@
 <script src="js/mainCtrl/mainctrl.controller.js"></script>
 <script src="js/tasksList/tasksList.controller.js"></script>
 <script src="js/tasksList/task.controller.js"></script>
+<script src="js/auth/registration.controller.js"></script>
 <script src="js/createMesima/createMesima.controller.js"></script>
 <script src="js/fn.directive/moduleDirectives.directive.js"></script>
 <script src="js/services/tasksService.js"></script>
