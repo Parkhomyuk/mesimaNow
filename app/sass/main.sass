@@ -354,8 +354,9 @@ template
 
 /*reset default*/
 /*Mixins Start*/
-$tablet-width: "(max-device-width: 768px)"
-$mobile-width: "(max-device-width:480px)"
+$landscape-width: "@media screen and (orientation: landscape)"
+$tablet-width: "(min-device-width: 768px) and (max-device-width: 968px)"
+$mobile-width: "(max-device-width:767px)"
 @mixin flex-g_row
   display: flex
   flex-direction: row
@@ -489,6 +490,33 @@ $color_battom: rgba(82, 69, 155, 0.7)
   color: white
 /* dropdown-gamburger_main end */
 /* Цвет пунктов меню в раскрывающихся списках */
+@media #{$mobile-width} and (orientation: landscape)
+  .navbar-default
+    height: 10vw
+    .container
+      .navbar-header
+        .navbar-brand
+          margin-top: 2vw
+          font-size: 6rem
+      .navbar-header
+        .navbar-toggle
+          display: block
+          height: 6vw
+          width: 6vw
+          margin-top: 2vw
+          border: 3px solid white
+          .icon-bar
+            width: 100%
+            height: 0.8vw
+    .whereIam
+      .header_userPhoto li>img
+        margin-top: -1vh
+        width: 60px
+        height: 60px
+  .b-hero-video
+    width: 100%
+    height: 100vw
+
 @media (max-width: 767px)
   .navbar-default .navbar-nav .open .dropdown-menu > li > a
     color: #ecf0f1
@@ -563,7 +591,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
     margin: 0 0 0 10vw
     .allCatBat
       width: 100%
-      height: 5vh
+      height: 9vw
       border: 2px solid $color_battom
       font-size: 5rem
       color: $color_battom
@@ -600,7 +628,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
           margin-top: 2vh
           margin-bottom: 2vh
           width: 100%
-          height: 5vh
+          height: 9vw
           border: 2px solid $color_battom
           font-size: 5rem
           color: $color_battom
@@ -642,7 +670,218 @@ $color_battom: rgba(82, 69, 155, 0.7)
      .nav-serv__image
        width: 200px
        height: auto
+   .nav > .header_userPhoto li>p
+     display: none
+   .nav > .header_userPhoto li
+     margin: 0 10px 0 10px
+   .navbar-default
+    height: 3vh
+    .container
+      width: 90%
+   .navbar-nav
+    .dropdown
+      display: block
+   .b-hero-video
+     .b-hero-video__offer
+       margin-left: 1vh
+       margin-right: 1vh
+       width: 100%
+       text-align: center
+       .b-hero-video__h1
+        font-size: 7rem
+       .b-hero-video__h2
+        font-size: 2rem
+       .b-hero-video__form
+        margin-left: 5%
+        width: 90%
+        line-height: 5vh
+       .b-hero-video__example
+        font-size: 1.5rem
+        margin-left: 5vw
+       .b-hero-video__gowork
+        font-size: 2rem
+   .b-hero-video__input
+     font-size: 3rem
+     .js-hero-input::-webkit-input-placeholder
+      font-size: 2rem
+     .js-hero-input::-moz-placeholder
+      font-size: 2rem
+     .js-hero-input:-moz-placeholder
+      font-size: 2rem
+     .js-hero-input :-ms-input-placeholder
+      font-size: 2rem
+   .b-hero-video__submit
+    height: 100%
+    width: 200px
+    .btn
+      height: 75px
+      width: inherit
 
+@media #{$tablet-width}
+  .services
+    margin: 0 0 0 15vw
+    .service_title
+      @include flex-g_row
+      justify-content: flex-start
+      border-top: 2px solid $color_forms
+      border-bottom: 2px solid $color_forms
+      div
+        display: table-cell
+        vertical-align: bottom
+        font-size: 5rem
+        margin-left: 5vw
+        margin-top: 1vh
+    .fa
+      display: inline-block
+      margin-left: 1vw
+      margin-top: 1vh
+      margin-bottom: 1vh
+      font-size: 10rem
+
+  .main_content
+    .nav-serv
+      width: 100vw
+      margin: 0 0 0 -18%
+      padding: 0
+      font-size: 3rem
+      div
+        margin: 0 4vw 0 1vw
+      h3
+        font-size: 5rem
+        color: black
+        font-weight: 700
+      .nav-serv__image
+        width: 500px
+        height: auto
+        margin-left: 23%
+        background-size: contain
+  .instruction
+    margin-top: 2vh
+    .tasck
+      margin: 0
+      padding: 0
+      .fa
+        margin-right: 2vw
+      img
+        width: 100%
+      .tasck_text
+        margin-top: 0
+        font-size: 3rem
+        .tasck_create_button
+          margin-top: 2vh
+          margin-bottom: 2vh
+          width: 100%
+          height: 9vw
+          border: 2px solid $color_battom
+          font-size: 5rem
+          color: $color_battom
+
+        h2
+          font-size: 5rem
+
+    .instruction_title
+      .instruction_title1
+        font-size: 5rem
+      .instruction_title2
+        font-size: 7rem
+  .app_mobile
+    img
+      display: none
+  .benefit
+    .benifit_header
+      font-size: 2rem
+      font-weight: 700
+    .benefit_item
+      margin-bottom: 2vh
+      @include flex-g_row
+      align-items: center
+      div
+        font-size: 2rem
+      .fa
+        font-size: 10rem
+        color: white
+        margin-right: 4vw
+
+
+  .firsrPage_mesimaList
+    text-align: center
+    margin-bottom: 2vh
+    h1
+      font-size: 4rem
+
+    .firsrPage_mesimaList_default
+      text-align: start
+      margin: 0 2vw 0 2vw
+      .panel-footer
+        margin-left: 2vw
+        overflow-x: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        margin-top: 2vh
+      .panel-body
+        text-align: start
+        margin-left: 2vw
+    .panel-body
+      @include flex-g_row
+      justify-content: flex-start
+      font-size: 4rem
+      color: $color_battom
+      .firsrPage_mesimaList_describe
+        overflow-x: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        flex-grow: 3
+      .firsrPage_mesimaList_price
+        white-space: nowrap
+        color: red
+  .allCatBat
+    width: 80%
+    margin-top: 2vh
+    height: 9vw
+    border: 2px solid $color_battom
+    font-size: 5rem
+    color: $color_battom
+  .footer
+    margin-top: -1vh
+    padding: 2vh 2vw 2vh 2vw
+
+    .footer_greed
+      @include flex-g_row
+      justify-content: space-between
+      align-items: flex-start
+
+      .item_footer
+        margin-bottom: 2vh
+        h1
+         font-size: 3rem
+        h2
+          font-size: 3rem
+        a
+          font-size: 2rem
+          line-height: 4rem
+    .border_contacts
+      box-shadow: inset 0 0 2em rgb(77, 77, 77)
+      border-top: 2px solid #c4c4c4
+      border-bottom: 2px solid #c4c4c4
+      padding-top: 2vh
+      display: none
+      .contacts
+        p
+          font-size: 4rem
+          padding-left: 3vw
+          color: white
+          span
+            color: red
+            margin-left: 1vw
+            font-weight: 700
+          a
+            color: red
+    .account
+      margin: 1vh 0 1vh 0
+      text-align: center
+      font-size: 4rem
+      padding-left: 3vw
+      color: white
 
 
 /* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
@@ -1182,14 +1421,47 @@ $color_battom: rgba(82, 69, 155, 0.7)
 
 @media #{$mobile-width}
   .firsrPage_mesimaList
+   text-align: center
+   margin-bottom: 2vh
    h1
     font-size: 4rem
-   text-align: center
+
+   .firsrPage_mesimaList_default
+     text-align: start
+     margin: 0 2vw 0 2vw
+     .panel-footer
+       margin-left: 2vw
+       overflow-x: hidden
+       text-overflow: ellipsis
+       white-space: nowrap
+       margin-top: 2vh
+     .panel-body
+       text-align: start
+       margin-left: 2vw
    .panel-body
+     @include flex-g_row
+     justify-content: flex-start
      font-size: 4rem
      color: $color_battom
+     .firsrPage_mesimaList_describe
+       overflow-x: hidden
+       text-overflow: ellipsis
+       white-space: nowrap
+       flex-grow: 3
+     .firsrPage_mesimaList_price
+       white-space: nowrap
+       color: red
+   .allCatBat
+     width: 80%
+     margin-top: 2vh
+     height: 9vw
+     border: 2px solid $color_battom
+     font-size: 5rem
+     color: $color_battom
+
    .panel-footer
-     font-size: 4rem
+     font-size: 3rem
+
   .footer
     margin-top: -1vh
     padding: 2vh 2vw 2vh 2vw

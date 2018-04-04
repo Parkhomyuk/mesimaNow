@@ -54,7 +54,7 @@
                 <div>
                     <div><img src="img/nav_serv2.png" class="nav-serv__image"></div>
                     <div> <h3>{{'FREE_TEXT.REL' | translate}}</h3></div>
-                    < <div class="nav_serv_content">Исполнители со статусом «Паспорт подтвержден» прошли проверку документов.</div>
+                    <div class="nav_serv_content">Исполнители со статусом «Паспорт подтвержден» прошли проверку документов.</div>
                 </div>
 
             </a>
@@ -70,14 +70,14 @@
 </div>
 <div class="container services" ng-style="hebrew">
     <div class="row">
-        <div class="col-xs-12 col-md-3 service_title" >
+        <div class="col-xs-12 col-md service_title" >
             <i class="fa fa-grav" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COURIER' | translate}}</div>
 
         </div>
-        <div class="col-xs-12 col-md-3 service_title">
+        <div class="col-xs-12 col-md service_title">
             <i class="fa fa-cog" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.REPAIRC' | translate}}</div></div>
-        <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-truck" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.SHIPING' | translate}}</div></div>
-        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-shower" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.CLEANING' | translate}}</div></div>
+        <div class="col-xs-12 col-md service_title"> <i class="fa fa-truck" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.SHIPING' | translate}}</div></div>
+        <div class="col-xs-12 col-md service_title"><i class="fa fa-shower" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.CLEANING' | translate}}</div></div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-desktop" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COMPUTER' | translate}}</div></div>
@@ -209,11 +209,22 @@
     </div>
 <div class="firsrPage_mesimaList">
     <h1>Что заказывают на Месима прямо сейчас</h1>
-    <div class="panel panel-default">
+    <!--<div class="panel panel-default firsrPage_mesimaList_default">
         <div class="panel-body">
-            Содержимое панели
+            <div class="firsrPage_mesimaList_describe">Изменить цены в файле PDF fdjfd fd dfsfds fs fdsfsfds fdsfds</div>
+            <div> - </div>
+            <div class="firsrPage_mesimaList_price">1145 NLS</div>
         </div>
-        <div class="panel-footer">Панель подвала</div>
+        <div class="panel-footer">Есть таблица в Word, нужно сделать такую же в Exel, один лист</div>
+    </div>-->
+    <div class="panel panel-default firsrPage_mesimaList_default" ng-repeat="task in mesimot" ng-if="$index<10">
+        <div class="panel-body" >
+            <div class="firsrPage_mesimaList_describe">{{task.name}}</div>
+            <div> - </div>
+            <div class="firsrPage_mesimaList_price">{{task.price | currency:'ILS'}}</div>
+        </div>
+        <div class="panel-footer">{{task.description}}</div>
     </div>
+    <button class="btn btn-default allCatBat">All categories</button>
 </div>
 

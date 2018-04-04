@@ -1,5 +1,5 @@
 angular.module('tasksList')
-    .controller('mainCtrl', function($scope,$translate,$location,$firebaseObject,Auth, $firebaseAuth){
+    .controller('mainCtrl', function($scope,$translate,$location,$firebaseObject,Auth, $firebaseAuth, dataService){
         /*$scope.modalShown = false;*/
         $scope.test='mainCtrl scope';
 
@@ -198,5 +198,10 @@ angular.module('tasksList')
             $scope.statusMobileMenu=true;
 
         }
+        $scope.mesimot=null;
+        dataService.getData().then(function(data){
+            $scope.mesimot=data.data;
+            console.log(data);
+        })
 
     });
