@@ -355,7 +355,8 @@ template
 /*reset default*/
 /*Mixins Start*/
 $landscape-width: "@media screen and (orientation: landscape)"
-$tablet-width: "(min-device-width: 768px) and (max-device-width: 968px)"
+$desctop-width: "(min-device-width: 968px)"
+$tablet-width: "(min-device-width: 768px) and (max-device-width: 967px)"
 $mobile-width: "(max-device-width:767px)"
 @mixin flex-g_row
   display: flex
@@ -775,7 +776,6 @@ $color_battom: rgba(82, 69, 155, 0.7)
           border: 2px solid $color_battom
           font-size: 5rem
           color: $color_battom
-
         h2
           font-size: 5rem
 
@@ -784,6 +784,8 @@ $color_battom: rgba(82, 69, 155, 0.7)
         font-size: 5rem
       .instruction_title2
         font-size: 7rem
+    .tasck_btn
+      text-align: center
   .app_mobile
     img
       display: none
@@ -1119,27 +1121,28 @@ $color_battom: rgba(82, 69, 155, 0.7)
     .b-hero-video__offer
       width: 100%
       height: 70vh
+      text-align: center
       .b-hero-video__example
         margin-left: 10%
         font-size: 2rem
       .b-hero-video__h1
-        font-size: 10rem
-        margin: 5vh 5vw 0 5vw
+        font-size: 9rem
+        margin: 5vh 5vw 0 0vw
       .b-hero-video__h2
         font-size: 3rem
         margin: 0 10vw 0 10vw
-    .b-hero-video__formbox
-      width: 80%
-      text-align: center
-      margin-left: 10%
-      .b-hero-video__input
-        input::-webkit-input-placeholder
-          font-size: 3rem
-        .js-hero-input
-           line-height: 3
-      .b-hero-video__submit
-       width: 35vw
-       .btn
+  .b-hero-video__formbox
+    width: 80%
+    text-align: center
+    margin-left: 10%
+    .b-hero-video__input
+      input::-webkit-input-placeholder
+        font-size: 3rem
+      .js-hero-input
+        line-height: 3
+    .b-hero-video__submit
+      width: 35vw
+      .btn
         line-height: 3
         width: 100%
         margin: 0.25vh 0 0.25vh 0
@@ -1163,24 +1166,24 @@ $color_battom: rgba(82, 69, 155, 0.7)
 .b-hero-video__offer
   font-family: 'Open Sans', sans-serif
   font-weight: 700
-  width: 680px
-  padding-top: 127px
+
+  padding-top: 15vh
   margin: 0 auto
   position: relative
   z-index: 5
   color: #fff
   text-align: center
-
-.b-hero-video__h1 
+.b-hero-video__h1
   font-family: 'Lato', sans-serif
-  font-size: 3.11111111em
+  font-size: 7rem
   line-height: 1.10714286
   letter-spacing: 1.4px
+  font-weight: 700
 
 .b-hero-video__h2 
   padding-bottom: 25px
   padding-top: 8px
-  font-size: 0.8em
+  font-size: 2rem
 
 .b-hero-video__keeper 
   font-family: 'Lato', sans-serif
@@ -1202,7 +1205,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
   top: 50%
   left: 50%
 
-.b-hero-video__input 
+.b-hero-video__input
   display: table-cell
   vertical-align: middle
   padding: 2px 11px 0 16px
@@ -1210,9 +1213,9 @@ $color_battom: rgba(82, 69, 155, 0.7)
   border: 2px solid orange
 .js-hero-input-block:hover
   border: 2px solid orange
-.b-hero-video__submit 
+.b-hero-video__submit
   display: table-cell
-  width: 178px
+
   margin-left: 0
   padding-left: 0
 
@@ -1226,11 +1229,12 @@ $color_battom: rgba(82, 69, 155, 0.7)
 
 .b-hero-video__example 
   text-align: left
-  font-size: .72222222em
+  font-size: 2rem
   line-height: 1.38461538
   color: hsla(0,0%,100%,.7)
   padding-top: .76923077em
   padding-bottom: 2.76923077em
+  margin-left: 23%
 
 .b-hero-video__input 
   display: table-cell
@@ -1245,7 +1249,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
   -moz-transition: box-shadow .3s ease
   transition: box-shadow .3s ease
   display: table
-  width: 100%
+  width: 80%
   table-layout: fixed
   border-radius: 8px
   background: #fff
@@ -1315,7 +1319,9 @@ $color_battom: rgba(82, 69, 155, 0.7)
 .b-hero-video__gowork span 
   border-bottom: 1px solid rgba(128,228,255,.4)
 
-.b-hero-video__gowork 
+.b-hero-video__gowork
+  span
+    font-size: 2rem
   -webkit-transition: all .3s ease
   -moz-transition: all .3s ease
   transition: all .3s ease
@@ -1325,8 +1331,11 @@ $color_battom: rgba(82, 69, 155, 0.7)
   position: relative
   z-index: 10
 
+
 .nav-serv
   margin-top: 1vh
+  h3
+   color: black
 
 .nav-serv div
   text-align: center
@@ -1335,13 +1344,65 @@ $color_battom: rgba(82, 69, 155, 0.7)
   justify-content: center
 
 .nav-serv__image 
-  width: 192px
+  width: 350px
   height: auto
   margin: 0 auto 10px
   background-size: contain
+@media #{$desctop-width}
+  .b-hero-video__offer
+    width: 80vw
+  .b-hero-video__formbox
+    width: 80%
+    text-align: center
+    margin-left: 10%
+    .js-hero-form
+      padding-left: 10vw
+    .b-hero-video__input
+      input::-webkit-input-placeholder
+        font-size: 2rem
+      .js-hero-input
+        line-height: 2
+    .b-hero-video__submit
+      width: 20vw
+      text-align: end
+      .btn
+        line-height: 2
+        margin: 0.25vh 0 0.25vh 0
+        font-size: 3rem
+        border-radius: 10px
+  .nav_serv_content
+    font-size: 2rem
+  .services
+    margin-top: 5vh
+    .service_title
+      @include flex-g_row
+      justify-content: flex-start
+      font-size: 3rem
+  .allCatBat_container
+    text-align: center
+    .allCatBat
+      width: 50%
+      margin-top: 2vh
+      height: 2vh
+      border: 2px solid $color_battom
+      font-size: 2rem
+      color: $color_battom
+  .tasck
+    .fa
+     font-size: 4rem
+     color: grey
+     margin-right: 1vw
+  .tasck_btn
+    .tasck_text
+      margin-left: 30%
+    .tasck_create_button
+        width: 80%
+        margin-top: 2vh
+        height: 9vw
+        border: 2px solid $color_battom
+        font-size: 5rem
 
-.services
-  margin-top: 5vh
+
 
 .services >.row> div
   text-align: left
@@ -1365,17 +1426,30 @@ $color_battom: rgba(82, 69, 155, 0.7)
 
 .instruction
   margin-top: 2vh
+  font-size: 3rem
+
 
 .instruction_title
   text-align: center
+  .instruction_title1
+    margin-bottom: 0
+  .instruction_title2
+    margin-top: 0
 
 .tasck
   margin: 10vh 0 10vh 0
-  padding: 0 3vw 0 3vw
+  padding: 0 0 0 0
+  width: 100%
   font-size: 2rem
   display: flex
   flex-direction: row
   flex-wrap: wrap
+  img
+
+  .tasck_text
+    font-size: 2rem
+    h2
+     margin-bottom: 2vh
 
 
 .tasck_text
@@ -1760,6 +1834,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
   margin-right: 1vw
 .header_userPhoto
   color: white
+
 .header_userPhoto ul
   margin-top: 1vh
 .header_userPhoto ul li>p
@@ -1770,6 +1845,7 @@ $color_battom: rgba(82, 69, 155, 0.7)
 
 .header_userPhoto ul> li
   display: inline
+  margin-right: 1vw
 .header_userPhoto>ul
   list-style-type: none
 

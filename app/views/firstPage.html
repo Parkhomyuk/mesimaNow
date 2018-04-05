@@ -18,7 +18,8 @@
                     <div class="b-hero-video__submit"><button class="btn btn-warning">Заказать услугу</button> <!---->
                     </div>
                 </div>
-                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></form>
+                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+            </form>
         </div>
         <!-- /.hero-video__formbox -->
         <!-- /.hero-video__form -->
@@ -70,14 +71,14 @@
 </div>
 <div class="container services" ng-style="hebrew">
     <div class="row">
-        <div class="col-xs-12 col-md service_title" >
+        <div class="col-xs-12 col-md-3 service_title" >
             <i class="fa fa-grav" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COURIER' | translate}}</div>
 
         </div>
-        <div class="col-xs-12 col-md service_title">
+        <div class="col-xs-12 col-md-3 service_title">
             <i class="fa fa-cog" aria-hidden="true" ng-style="hebrewMargin"> </i><div class="">{{'UNLIMITPACKAGE_PAGE.REPAIRC' | translate}}</div></div>
-        <div class="col-xs-12 col-md service_title"> <i class="fa fa-truck" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.SHIPING' | translate}}</div></div>
-        <div class="col-xs-12 col-md service_title"><i class="fa fa-shower" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.CLEANING' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-truck" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.SHIPING' | translate}}</div></div>
+        <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-shower" aria-hidden="true" ng-style="hebrewMargin"></i><div class="">{{'UNLIMITPACKAGE_PAGE.CLEANING' | translate}}</div></div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-desktop" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.COMPUTER' | translate}}</div></div>
@@ -100,14 +101,13 @@
         <div class="col-xs-12 col-md-3 service_title"> <i class="fa fa-car" aria-hidden="true" ng-style="hebrewMargin"> </i><div class=""> {{'UNLIMITPACKAGE_PAGE.REPAIRT' | translate}}</div></div>
         <div class="col-xs-12 col-md-3 service_title"><i class="fa fa-sign-language" aria-hidden="true" ng-style="hebrewMargin"></i><div class=""> {{'UNLIMITPACKAGE_PAGE.EDUCATION' | translate}}</div></div>
     </div>
-    <div class="container">
+    <div class="container allCatBat_container ">
 
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+
                 <button class="btn btn-default allCatBat">All categories</button>
             </div>
-            <div class="col-md-4"></div>
+
         </div>
     </div>
 </div>
@@ -149,11 +149,17 @@
                 <div class="col-md-6"><i class="fa fa-star-o" aria-hidden="true"></i>{{'FREE_TEXT.RATING' | translate}}</div>
                 <div class="col-md-6"><i class="fa fa-user-o" aria-hidden="true"></i>{{'FREE_TEXT.WORK' | translate}}</div>
             </div>
-            <button class="btn btn-warning tasck_create_button">{{'FREE_TEXT.CREATE' | translate}}</button>
-            <p>и найдите исполнителя за несколько минут</p>
+
         </div>
 
     </div>
+    <div class="tasck tasck_btn">
+        <div class="tasck_text">
+            <button class="btn btn-warning tasck_create_button">{{'FREE_TEXT.CREATE' | translate}}</button>
+            <p>и найдите исполнителя за несколько минут</p>
+        </div>
+    </div>
+
 
 </div>
 </div>
